@@ -6,7 +6,7 @@ class Solution {
         map.put(']','[');
         map.put(')','(');
         map.put('}','{');
-        if(s.length() <= 1 || s.length()%2 != 0){
+        if(s.length() <= 1 || s.length()%2 != 0|| s.charAt(0) == ']' || s.charAt(0) == ')' || s.charAt(0) == '}'){
             return false;
         }
         for(int i = 0; i < s.length(); i++){
