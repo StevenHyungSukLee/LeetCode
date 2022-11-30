@@ -1,4 +1,5 @@
 class MinStack {
+    int curMin = 0;
     private Stack<int[]> stack = new Stack<>();
     
     public MinStack() {
@@ -11,7 +12,7 @@ class MinStack {
             stack.push(new int[] {val,val});
             return;
         }
-        int curMin = stack.peek()[1];
+        curMin = stack.peek()[1];
         stack.push(new int[]{val, Math.min(val, curMin)});
     }
     
