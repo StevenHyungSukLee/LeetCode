@@ -1,5 +1,5 @@
 class MinStack {
-    int curMin = 0;
+    int curMin;
     private Stack<int[]> stack = new Stack<>();
     
     public MinStack() {
