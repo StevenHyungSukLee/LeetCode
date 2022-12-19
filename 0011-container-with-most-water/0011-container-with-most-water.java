@@ -16,7 +16,6 @@ class Solution {
                 max = Math.max(max, (r-l)*height[r]);
                 r--;
             }
-            System.out.println(max);
         }
         return max;
     }
