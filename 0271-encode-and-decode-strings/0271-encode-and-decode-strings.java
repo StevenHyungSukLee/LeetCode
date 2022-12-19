@@ -4,12 +4,15 @@ public class Codec {
     HashMap<String, List<String>> map = new HashMap<>();
     
     public String encode(List<String> strs) {
+        StringBuilder sb = new StringBuilder();
+        
         String s = "";
         for(int i = 0; i < strs.size(); i++){
-            s = s + strs.get(i);
+            sb.append(strs.get(i));
+            // s = s + strs.get(i);
         }
-        map.put(s,strs);
-        return s;
+        map.put(sb.toString(),strs);
+        return sb.toString();
     }
 
     // Decodes a single string to a list of strings.
