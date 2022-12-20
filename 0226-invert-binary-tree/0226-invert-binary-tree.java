@@ -20,10 +20,7 @@ class Solution {
         }
         TreeNode dup = new TreeNode(root.val);
         dup.left = invertTree(root.right);
-        // dup.val = root.val;
         dup.right = invertTree(root.left);
-        
-            
         
         return dup;
     }
