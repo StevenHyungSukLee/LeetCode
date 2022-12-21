@@ -16,9 +16,6 @@ class Solution {
         ListNode res = head;
         ListNode temp = head;
         
-        // if(head.next == null){
-        //     return null;
-        // }
         while(temp.next != null){
             count++;
             temp = temp.next;
