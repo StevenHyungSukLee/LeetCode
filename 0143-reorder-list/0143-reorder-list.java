@@ -22,7 +22,7 @@ class Solution {
         slow.next = null;
         ListNode prev = null;
         ListNode temp = null;
-        while(second != null){
+        while(second != null){//reversed second half of the linked list
             temp = second.next;
             second.next = prev;
             prev = second;
