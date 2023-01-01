@@ -11,21 +11,16 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        Map<ListNode,Integer> map = new HashMap<>();
-        
-        while(headA != null){
-            map.put(headA, headA.val);
-            headA = headA.next;
+        ListNode pA = headA;
+        ListNode pB = headB;
+        while (pA != pB) {
+            pA = pA == null ? headB : pA.next;
+            pB = pB == null ? headA : pB.next;
         }
-        
-        while(headB != null){
-            if(map.containsKey(headB)){
-                return headB;
-            }
-            
-            headB = headB.next;
-        }
-        
-        return null;
+        return pA;
+        // Note: In the case lists do not intersect, the pointers for A and B
+        // will still line up in the 2nd iteration, just that here won't be
+        // a common node down the list and both will reach their respective ends
+        // at the same time. So pA will be NULL in that case.
     }
 }
