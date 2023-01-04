@@ -6,7 +6,7 @@ class KthLargest {
         this.k = k;
         
         for(int num: nums){
-            pq.add(num);
+            pq.offer(num);
         }
         
         while(pq.size() > k){
@@ -16,7 +16,7 @@ class KthLargest {
     }
     
     public int add(int val) {
-        pq.add(val);
+        pq.offer(val);
         if(pq.size() > k){
             pq.poll();
         }
