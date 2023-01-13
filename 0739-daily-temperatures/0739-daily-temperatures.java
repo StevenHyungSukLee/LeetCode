@@ -7,6 +7,7 @@ class Solution {
         for(int i = 0; i < temperatures.length; i++){
            int cur = temperatures[i];
             
+            
             while(!stack.isEmpty() && temperatures[stack.peek()] < cur){
                 int prev = stack.pop();
                 result[prev] = i-prev;
